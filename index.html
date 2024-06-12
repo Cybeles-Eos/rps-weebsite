@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Comfortaa:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ramabhadra&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="GameStyle.css">
+  <title>Rock, Paper, Scissors | Frontend Mentor</title>
+</head>
+<body>
+  <div class="rules-holder">
+    <div class="rules">
+      <div class="rules-header">
+        <p id="rules-title">rules</p>
+        <button id="rules-x">
+          <img id="img-close" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-close.svg">
+        </button>
+      </div>
+      <img id="rulesImg" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/image-rules.svg">
+    </div>
+  </div>
+
+  <main>
+    <section class="top-box">
+      <div class="t-left-pick">
+        <h1 id="pick">Rock</h1>
+        <h1 id="pick">Paper</h1>
+        <h1 id="pick">Scissors</h1>
+      </div>
+
+      <div class="t-right-scores">
+        <p id="score">score</p>
+        <p id="scoreCounter">0</p>
+      </div>
+    </section>
+
+    <!-- Game PICK Section -->
+    <article class="game-function-holder">
+      <div class="gfunc1">
+        <!-- Papper -->
+        <div class="circle-pick cp_papper">
+          <div class="inner-circle">
+            <img id="imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-paper.svg" alt="Papper">
+          </div>
+        </div>
+
+        <!-- Scissors -->
+        <div class="circle-pick cp_scissors">
+          <div class="inner-circle">
+            <img id="imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-scissors.svg" alt="Scissors">
+          </div>
+        </div>
+
+        <!-- Rock -->
+        <div class="circle-pick cp_rock">
+          <div class="inner-circle">
+            <img id="imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-rock.svg" alt="Rock">
+          </div>
+        </div>
+
+        <img class="tirangle" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/bg-triangle.svg" alt="">
+      </div>
+    </article>
+
+    <!-- Game RESULT Section -->
+    <article class="game-function-result">
+
+      <!-- MY PICKED -->
+      <div class="myPick">
+        <p id="pick_title">you picked</p>
+        
+        <div class="pickedRPS_holder">
+          <!-- Picked Papper -->
+          <div class="picked_circle papperPicked">
+            <div class="picked_inner">
+              <img id="picked_imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-paper.svg" alt="Papper">
+            </div>
+          </div>
+          <!-- Picked Scissors -->
+          <div class="picked_circle scissorsPicked">
+            <div class="picked_inner">
+              <img id="picked_imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-scissors.svg" alt="Scissors">
+            </div>
+          </div>          
+          <!-- Picked Rock -->
+          <div class="picked_circle rockPicked">
+            <div class="picked_inner">
+              <img id="picked_imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-rock.svg" alt="Rock">
+            </div>
+          </div> 
+          
+          <!-- Focus whos the Winner -->
+          <div class="focusWinOut">
+            <div class="focusWinIn1">
+              <div class="focusWinIn2"></div>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+      <!-- RESULT OF GAME -->
+      <div class="resultOfGame">
+        <h1 id="winOrLose"></h1>
+        <button id="again">Play again</button>
+      </div>
+
+      <!-- HOUSE HOLD PICKED -->
+      <div class="housePick">
+        <p id="pick_title">the house picked</p>
+        
+        <div class="pickedRPS_holder">
+          <!-- Picked Papper -->
+          <div class="picked_circle papperPicked">
+            <div class="picked_inner">
+              <img id="picked_imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-paper.svg" alt="Papper">
+            </div>
+          </div>
+          <!-- Picked Scissors -->
+          <div class="picked_circle scissorsPicked">
+            <div class="picked_inner">
+              <img id="picked_imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-scissors.svg" alt="Scissors">
+            </div>
+            
+          </div>      
+             
+          <!-- Picked Rock -->
+          <div class="picked_circle rockPicked">
+            <div class="picked_inner">
+              <img id="picked_imgRPS" src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/images/icon-rock.svg" alt="Rock">
+            </div>
+          </div>  
+
+          <!-- Focus whos the Winner -->
+          <div class="focusWinOut">
+            <div class="focusWinIn1">
+              <div class="focusWinIn2"></div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </article>
+
+    <button id="rules">rules</button>
+  </main>
+  <audio id="audioPick">
+    <source src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/Audio/mixPu.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="winner">
+    <source src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/Audio/win.wav" type="audio/mpeg">
+  </audio>
+</body>
+<script src="/CSS-EXERCISE/EXERCISE-8/rock-paper-scissors-master/game.js"></script>
+</html>
+<!-- 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+ -->
+
+<!-- 
+  Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again 
+-->

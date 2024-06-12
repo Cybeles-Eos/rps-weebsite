@@ -1,0 +1,269 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+:root{
+   /* Primary */
+   --ScissorsGradient: radial-gradient(circle at bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+   --PaperGradient: radial-gradient(circle at bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+   --RockGradient: radial-gradient(circle at bottom,hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+   --LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+   --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+   /* Shadow */
+   --Sblue: #2845BE;
+   --SGold: #C76C1D;
+   --Sred: #9E1634;
+
+   /* Neutral */
+   --DarkText: hsl(229, 25%, 31%);
+   --ScoreText: hsl(229, 64%, 46%);
+   --HeaderOutline: hsl(217, 16%, 45%);
+   --White: hsl(0, 0%, 90%);
+
+   /* Background */
+   --RadialGradient: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+   --BodyBack: #161D40;
+
+   /* Size */
+   --Mobile: 375px;
+   --Desktop: 1366px;
+}
+
+/*===============================*/
+/*    Game PICK Section Style    */
+/*===============================*/
+.game-function-holder{
+   width: 100%;
+   height: 27rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 1rem;
+}
+.activeGameFunctionHolder{
+   display: none !important; /*JS - toggle*/
+}
+.gfunc1{
+   width: 20rem;
+   aspect-ratio: 1;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   user-select: none;
+}
+.tirangle{
+   width: 13rem;
+   user-select: none;
+   pointer-events: none;
+}
+
+
+/* Circle Style */
+.circle-pick{
+   width: 8.6rem;
+   aspect-ratio: 1;
+   border-radius: 50rem;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+.circle-pick:active{
+   opacity: .8;
+}
+.inner-circle{
+   width: 7rem;
+   aspect-ratio: 1;
+   border-radius: 50rem;
+   background-color: var(--White);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: inset -1px 7px 1px rgba(128, 128, 128, 0.247);
+}
+#imgRPS{
+   width: 3rem;
+   user-select: none !important;
+}
+
+/* Papper Style */
+.cp_papper{
+   top: -.5rem;
+   left: -.5rem;
+   background-image: var(--PaperGradient);
+   box-shadow:  0px 6px 1px var(--Sblue);
+}
+/* Scissors Style */
+.cp_scissors{
+   top: -.5rem;
+   right: -.5rem;
+   background-image: var(--ScissorsGradient);
+   box-shadow:  -1px 6px 1px var(--SGold);
+}
+/* Rock */
+.cp_rock{
+   bottom: 1rem;
+   background-image: var(--RockGradient);
+   box-shadow:  -1px 6px 1px var(--Sred);
+}
+
+
+
+
+
+
+/*===============================*/
+/*   Game RESULT Section Style   */
+/*===============================*/
+.game-function-result{
+   width: 100%;
+   height: 27rem;
+   display: none; /*display flex || none*/
+   justify-content: center; 
+   align-items: center;
+   margin-top: 1rem;
+   gap: 1rem;
+}
+.activeGameFunctionResult{
+   display: flex !important; /*JS - toggle*/
+}
+
+   /* PICK  STYLE  Font and Title*/
+.myPick, .housePick{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  aspect-ratio: 1; 
+}
+#pick_title{
+   margin: 1rem 0px 5rem 0px;
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 1.2rem;
+   color: var(--White);
+   word-spacing: 3px;
+}
+
+/* Picked Style Circle */
+.pickedRPS_holder{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50rem; 
+   width: 10rem;
+   aspect-ratio: 1;
+   background-color: var(--BodyBack);
+   transition: 1s;
+
+}
+.picked_circle{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-width: 13rem;
+   aspect-ratio: 1;
+   border-radius: 50rem;
+   cursor: pointer;
+   z-index: 10;  /* If have error Delete this */
+}
+.picked_inner{
+   width: 10rem;
+   aspect-ratio: 1;
+   border-radius: 50rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--White);
+   box-shadow: inset -1px 10px 1px rgba(128, 128, 128, 0.247);
+}
+#picked_imgRPS{
+   width: 3.6rem;
+   user-select: none;
+}
+
+.resultOfGame{
+   width: 11rem;
+   flex-direction: column;
+   align-items: center;
+   display: none;
+}
+.playAgain{
+   display: flex !important;
+}
+#winOrLose{
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   color: var(--White);
+   margin-bottom: 10px;
+}
+#again{
+   z-index: 10;
+   cursor: pointer;
+   width: 10rem;
+   height: 2.4rem;
+   color: var(--Sred);
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   border: none;
+   border-radius: 5px;
+}
+
+
+/* Player and House Picked */
+.papperPicked{
+   background-image: var(--PaperGradient);
+   box-shadow:  0px 10px 1px var(--Sblue);
+   display: none;
+}
+.scissorsPicked{
+   background-image: var(--ScissorsGradient);
+   box-shadow:  0px 10px 1px var(--SGold);
+   display: none;
+}
+.rockPicked{
+   background-image: var(--RockGradient);
+   box-shadow:  0px 10px 1px var(--Sred);
+   display: none;
+}
+.activePlayeAndHousePicked{
+   display: flex !important;
+}
+
+/* Focus Win */
+.focusWinOut, .focusWinIn1, .focusWinIn2{
+   position: absolute;
+   width: 30rem;
+   aspect-ratio: 1;
+   border-radius: 50rem;
+   background-color: rgba(255, 255, 255, 0.018);
+   display: none; 
+   justify-content: center;
+   align-items: center;
+}
+.activeWin{
+   display: flex !important;
+}
+.focusWinIn1{
+   width: 24rem;
+}
+.focusWinIn2{
+   width: 18rem;
+}
+
+
+
+
+
+
+
+
