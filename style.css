@@ -33,6 +33,17 @@ body{
    position: relative;
 }
 
+#developer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-size: .8rem;
+    font-weight: 600;
+    opacity: .7;
+    color:white;
+}   
+
 .rules-holder{
    /* z-index: 20; */
    transition: 1s;
